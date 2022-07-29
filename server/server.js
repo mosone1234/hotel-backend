@@ -27,11 +27,12 @@ app.use(require("./src/route/pago.route"));
 // LISTEN PORT
 app.listen(app.get("port"), () => {
   console.log("El SERVIDOR ESTA FUNCIONANDO");
-  db.sequelize.sync({ force: true }).then(() => {
-    console.log("drop and resync with { force: true }");
-    migrateDB.fixturesLoader();
-  });
-  // db.sequelize.sync().then(() => {
+  // db.sequelize.sync({ force: true }).then(() => {
   //   console.log("drop and resync with { force: true }");
+  //   migrateDB.fixturesLoader();
   // });
+  db.sequelize.sync().then(() => {
+    migrateDB.fixturesLoader();
+    console.log("drop and resync with { force: true }");
+  });
 });
