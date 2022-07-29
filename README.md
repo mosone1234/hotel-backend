@@ -13,6 +13,10 @@
 - `Correr Proyecto modo Producccion`
 > 
 > **npm run prod**
+> 
+- `Puerto donde corre el backend`
+> `http://localhost:2000/api`
+- 
 
 # Librerias Utilizadas
 
@@ -51,10 +55,10 @@
     PORT_FRONTEND=http://localhost:3000
 
 ```
+# Sequelize fixtures
 
->  Puerto donde corre el backend
-- `http://localhost:2000/api`
-- 
+* Con esta libreria generamos datos por defecto en la base de datos cuando esta inicializa.
+
 ## Modelos
 * Cliente
 * Cuarto
