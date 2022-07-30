@@ -16,7 +16,26 @@
 > 
 - `Puerto donde corre el backend`
 > `http://localhost:2000/api`
-- 
+#
+
+# package.json
+## Configurar dotenv en S.O. UNIX, WINDOWS
+
+- `Unix`
+```
+ "scripts": {
+    "dev": "NODE_ENV=development nodemon server/server.js",
+    "prod": "NODE_ENV=production node server/server.js"
+  },
+```
+- `windows`
+```
+ "scripts": {
+    "dev": "set NODE_ENV=development nodemon server/server.js",
+    "prod": "set NODE_ENV=production node server/server.js"
+  },
+```
+
 
 # Librerias Utilizadas
 
@@ -43,7 +62,7 @@
     MYSQL_USER=root
     MYSQL_PASSWORD=root
     MYSQL_DB=hotel
-    PORT_BACKEND=2100
+    PORT_BACKEND=2000
     PORT_FRONTEND=http://localhost:3000
  .env.production
     NODE_ENV=development
@@ -51,7 +70,7 @@
     MYSQL_USER=root
     MYSQL_PASSWORD=root
     MYSQL_DB=hotel
-    PORT_BACKEND=2100
+    PORT_BACKEND=2000
     PORT_FRONTEND=http://localhost:3000
 
 ```
